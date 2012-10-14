@@ -26,9 +26,10 @@ class Variavel_model extends CI_Model {
 	
 	}
 	function findVariable($name){
-	$this->db->select('*');
+	$this->db->select('DIS_VARIAVEL.ID,DIS_VARIAVEL.NOME,DIS_VARIAVEL.DESCRICAO_PORTUGUES,DIS_VARIAVEL.DESCRICAO_INGLES,DIS_BOOK.NOME_PORTUGUES AS BOOK');
 	$this->db->from('DIS_VARIAVEL');
 	$this->db->join('DIS_LAYOUT_C_VARIAVEL','DIS_LAYOUT_C_VARIAVEL.ID=DIS_VARIAVEL.ID','inner');
+	$this->db->join('DIS_BOOK','DIS_BOOK.ID=DIS_VARIAVEL.BOOK_ID','inner');
 	$this->db->where('NOME', trim($name));
 	$query=$this->db->get();
 		if($query->num_rows()>0){

@@ -46,6 +46,7 @@ class Consulta extends CI_Controller {
 			
 			foreach($data as $item => $value){
 				$variableData=$this->variavel->findVariable($value['VARIAVEL']);
+				
 				if($variableData== false){
 					array_push($variables['notfound'],$value['VARIAVEL']);
 				}

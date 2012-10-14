@@ -30,7 +30,7 @@
 <td><?php echo $item['NOME'];?> </td>
 <td><?php echo $item['DESCRICAO_PORTUGUES'];?> </td>
 <td><?php echo $item['DESCRICAO_INGLES'];?> </td>
-<td><?php echo $item['BOOK_ID'];?> </td>
+<td><?php echo $item['BOOK'];?> </td>
 
 <?endforeach;?>
 
