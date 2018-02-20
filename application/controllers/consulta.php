@@ -59,6 +59,6 @@ class Consulta extends CI_Controller {
 		}
 	}
 	function novo(){
-		echo "Teste4";
+		echo "Teste3";
 	}
 }
