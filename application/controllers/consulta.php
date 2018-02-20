@@ -58,4 +58,7 @@ class Consulta extends CI_Controller {
 			$this->load->view('variavel/upload_sucess', $variables);
 		}
 	}
+	function novo(){
+		echo "Teste";
+	}
 }
